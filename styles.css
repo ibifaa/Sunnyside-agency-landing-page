@@ -7,7 +7,7 @@
 body{
     font-family: 'Barlow';
     font-size: 1rem;
-    background-color: hsl(198, 81%, 60%);
+    background-color: #3dbeff;
 }
 
 /* colors */
@@ -40,7 +40,18 @@ header{
     align-items: center;
     height: 44px;
     width: 100%;
-    padding: 5% 8%;
+    padding: 8% 12%;
+    position: fixed;
+    z-index: 5px;
+
+
+}
+
+@media screen and (min-width:1024px) {
+
+    header{
+        padding: 3% 4%;
+    }
 
 }
 
@@ -53,6 +64,7 @@ header{
 
 ul{
     gap: 20px;
+    font-size: 1.5rem;
 }
 
 ul li a{
@@ -65,13 +77,118 @@ li{
     list-style: none;
 }
 
-@media screen and (max-width:640px) {
+.nav-items{
+    font-size: 1.3rem;
+    align-items: center;
+    font-weight: 600;
+    font-family: 'Fraunces';
+}
+.nav-items button{
+    font-size: 1rem;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
 
     .nav-items{
         display:none;
     }
+
+    .nav-items{
+        display:none;
+    }
+
+/* Hero section */
+.hero-section{
+    background-image: url(images/mobile/image-header.jpg);
+    background-size: 100%;
+    background-position: 20%  80%;
+    background-repeat: no-repeat;
+    padding: 2%;
+    height: 100vmin;
+    color: white;
+    padding-top: 44px;
+}
+
+h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+   text-align: center;
+   font-family: 'Fraunces';
+   line-height: 1.2;
+   margin: 50px auto;
+   font-weight: 900;
+   letter-spacing: 5px;
+}
+
+
+@media screen and (min-width:768px) {
+
+    .nav-items{
+        display:flex;
+    }
+
+    .hamburger{
+        display:none;
+    }
+
+    header{
+        padding: 4% 8%;
+    }
+
+    h1{
+       /* margin: 40px auto; */
+       letter-spacing: 5px;
+       font-size: 3rem;
+
+    }
+
+    .hero-section{
+        background-image: url(images/mobile/image-header.jpg);
+        background-position: 10% 90%;
+    }
     
+   
+    
+}
+
+.hero-img{
+    width: 100%;
+    margin: 5% auto;
+    text-align: center;
 }
 
 
 
+@media screen and (min-width: 768px){
+    .hero-img{
+        margin: 18% auto;
+    }
+    
+ 
+}
+
+@media screen and (min-width:1024px) {
+    header{
+        padding: 2% 4%;
+    }
+
+    
+.hero-section{
+    background-image: url(images/desktop/image-header.jpg);
+    background-position: 10% 90%;
+    background-repeat: no-repeat;
+}
+
+br{
+    display: none;
+}
+
+.hero-img{
+    margin: 12% auto;
+}
+}
