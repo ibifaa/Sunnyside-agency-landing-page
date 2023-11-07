@@ -46,8 +46,6 @@ header{
     height: 44px;
     width: 100%;
     padding: 8% 8%;
-
-
 }
 
 @media screen and (min-width:1024px) {
@@ -85,6 +83,7 @@ li{
     align-items: center;
     font-weight: 600;
     font-family: 'Fraunces';
+    display: none;
 }
 .nav-items button{
     font-size: 1.5rem;
@@ -101,9 +100,7 @@ li{
         display:none;
     }
 
-    .nav-items{
-        display:none;
-    }
+
     
 
 /* Hero section */
@@ -143,10 +140,8 @@ h1{
 @media screen and (min-width:768px) {
 
     .nav-items button{
-        font-size: 1rem;    
-       
-            padding: 6px 18px;
-      
+        font-size: 1rem;
+        padding: 6px 18px;
     }
 
     .nav-items{
@@ -154,9 +149,9 @@ h1{
         font-size: 1rem;
     }
 
-    .hamburger{
+    /* .hamburger{
         display:none;
-    }
+    } */
 
     header{
         padding: 4% 8%;
@@ -221,7 +216,6 @@ h1{
     /* background-color: red; */
     grid-template-columns:1fr
     grid-template-rows: repeat(6, 1fr); 
-    
    
 }
 
@@ -356,7 +350,7 @@ article img{
 
   .testimonial-section p{
   width: 80%;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
   margin: 10px auto;
   
@@ -366,6 +360,7 @@ article img{
     font-family: 'Fraunces';
     font-size: 1.2rem;
     font-weight: 700;
+    color:hsl(212, 27%, 19%);
 }
 
   .card{
@@ -464,6 +459,61 @@ article img{
     color:  hsl(167, 40%, 24%);
   }
 
+  .learn{
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .learnOne::after{
+    content: " ";
+    /* margin: 5px; */
+    padding: 4px;
+    background-color: #ff7362;
+    display: block;
+    position: absolute;
+    width: 141px;
+    border-radius: 5px;
+    left: 24%;
+    bottom: 3px;
+   
+  }
+
+  .learnTwo::after{
+    content: " ";
+    /* margin: 5px; */
+    padding: 4px;
+    background-color: #fed501;
+    display: block;
+    position: absolute;
+    width: 141px;
+    border-radius: 5px;
+    left: 24%;
+    bottom: 3px;
+    z-index: 3;
+  }
+
+  @media screen and (min-width:760px) {
+    .learnTwo::after{
+      left: 26%;
+    }
+
+
+  .learnOne::after{
+    left: 26%;
+  }
+  }
+
+  @media screen and (min-width:1024px) {
+    .learnTwo::after{
+      left: 38%;
+    }
+
+
+  .learnOne::after{
+    left: 38%;
+  }
+  }
 
 
 
