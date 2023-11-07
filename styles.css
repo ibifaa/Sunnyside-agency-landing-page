@@ -7,11 +7,11 @@
 body{
     font-family: 'Barlow';
     font-size: 1rem;
-    background-color: #3dbeff;
+   
 }
 
-/* colors 
-.container{
+colors 
+.fan{
   background-color: hsl(7, 99%, 70%);
   background-color: hsl(51, 100%, 49%);
   background-color:  hsl(167, 40%, 24%);
@@ -22,7 +22,7 @@ background-color:  hsl(213, 9%, 39%);
 background-color:  hsl(232, 10%, 55%);
 background-color:  hsl(210, 4%, 67%);
 
-} */
+}
 
 .container{
     padding:  auto 10%;
@@ -38,7 +38,7 @@ background-color:  hsl(210, 4%, 67%);
 }
 
 header{
-    /* background-color: black; */
+    background-color: #3dbeff;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -104,6 +104,7 @@ li{
     .nav-items{
         display:none;
     }
+    
 
 /* Hero section */
 .hero-section{
@@ -112,10 +113,11 @@ li{
     background-position: 20%  80%;
     background-repeat: no-repeat;
     /* padding: 2%; */
-    height: 100vmin;
+    height: 90vmin;
     color: white;
     /* display: grid;
     grid-template-columns: 1fr; */
+    background-color: #3dbeff;
 
 }
 
@@ -125,16 +127,31 @@ h1{
    text-align: center;
    font-family: 'Fraunces';
    line-height: 1.5;
-   margin: 50px auto;
    font-weight: 900;
    letter-spacing: 5px;
+   /* background-color: green; */
+   padding-top: 5%;
+}
+
+.hero-img{
+    width: 100%;
+    margin: 15px auto;
+    text-align: center;
 }
 
 
 @media screen and (min-width:768px) {
 
+    .nav-items button{
+        font-size: 1rem;    
+       
+            padding: 6px 18px;
+      
+    }
+
     .nav-items{
         display:flex;
+        font-size: 1rem;
     }
 
     .hamburger{
@@ -151,35 +168,29 @@ h1{
        font-size: 3rem;
 
     }
+    br{
+        display: none;
+    }
 
     .hero-section{
         background-image: url(images/mobile/image-header.jpg);
         background-position: 10% 90%;
     }
     
-   
-    
-}
-
-.hero-img{
-    width: 100%;
-    margin: 15px auto;
-    text-align: center;
-}
-
-
-
-@media screen and (min-width: 768px){
     .hero-img{
-        margin: 18% auto;
+        margin: 20% auto;
     }
     
- 
 }
+
 
 @media screen and (min-width:1024px) {
     header{
         padding: 3% 4%;
+    }
+
+    .hero-img{
+        margin: 5% auto;
     }
 
     
@@ -193,18 +204,24 @@ br{
     display: none;
 }
 
-.hero-img{
-    margin: 20% auto;
-}
+
+h1{
+    /* margin: 40px auto; */
+    letter-spacing: 5px;
+    font-size: 3.5rem;
+
+ }
+
 }
 
 /* Service-Section */
 
 .service-section{
     display: grid;
-    background-color: white;
+    /* background-color: red; */
     grid-template-columns:1fr
     grid-template-rows: repeat(6, 1fr); 
+    
    
 }
 
@@ -273,6 +290,10 @@ article img{
     margin-top: 80%;
   }
 
+  .design .content h3, .photography .content h3{
+    margin-bottom: 10px;
+  }
+
   .photography{
     background-image: url("images/mobile/image-photography.jpg");
     background-size: cover;
@@ -281,11 +302,168 @@ article img{
     height: 600px;
   }
 
-
-
-@media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     .service-section{
         grid-template-columns: repeat(2, 1fr);
         /* grid-template-rows: repeat(3, 1fr); */
     }
+
+    .one{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .photography, .design{
+        height: 600px;
+        background-position: top center;
+        background-size: 100%;
+        font-size: 1.5rem;
+      }
+
+      .photography .content p, .design .content p{
+        width: 80%;
+        margin: auto;
+      }
+
+  
 } 
+
+@media screen and (min-width: 1024px) {
+  
+    .photography, .design{
+        height: 1000px;
+    }
+} 
+
+
+  /* Testimonial section */
+  .testimonial-section{
+    text-align: center;
+    padding: 5%;
+    font-size: 1rem;
+    font-weight: 400;
+    color: hsl(213, 9%, 39%); ;
+    
+  }
+
+  .testimonial-section h3{
+   text-transform: uppercase;
+   font-size: 1.5rem;
+   font-family: 'Fraunces';
+  }
+
+
+
+
+  .testimonial-section p{
+  width: 80%;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 10px auto;
+  
+  }
+
+.name{
+    font-family: 'Fraunces';
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+  .card{
+    margin-top: 20px;
+  }
+
+  .card img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+
+
+
+@media screen and (min-width: 768px) {
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+    }
+
+    .testimonial-section h3{
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+       }
+
+       .testimonial-section p{
+        font-size: 0.9rem;
+        }
+
+        .name{
+            font-size: 1rem;
+            color:hsl(212, 27%, 19%);
+        }
+
+} 
+
+@media screen and (min-width: 1024px) {
+  
+
+       .testimonial-section p{
+        font-size: 1.1rem;
+        width: 80%;
+        }
+
+        .name{
+            font-size: 1.2rem;
+        }
+
+} 
+
+
+  /* Gallery Section */
+
+  .image-gallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+   .image-gallery img{
+   width: 100%;
+  }
+
+  /* Footer section */
+
+  footer{
+    text-align: center;
+    padding: 20px;
+    background-color:  hsl(168, 34%, 41%);
+    color:  hsl(167, 40%, 24%);
+  }
+
+  .footer-items{
+    justify-content: center;
+    font-size: 1.5rem;
+    gap: 20px;
+    padding: 10px;
+    
+  }
+
+  .footer-items a{
+    color:  hsl(167, 40%, 24%);
+  }
+
+  footer .logo{
+    padding: 10px;
+  }
+  .socials{
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  .socials img{
+    width: 30px;
+    margin-right: 10px;
+    color:  hsl(167, 40%, 24%);
+  }
+
+
+
+
