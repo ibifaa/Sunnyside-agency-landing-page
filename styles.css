@@ -149,9 +149,9 @@ h1{
         font-size: 1rem;
     }
 
-    /* .hamburger{
+    .hamburger{
         display:none;
-    } */
+    }
 
     header{
         padding: 4% 8%;
@@ -474,7 +474,7 @@ article img{
     position: absolute;
     width: 141px;
     border-radius: 5px;
-    left: 24%;
+    left: 25%;
     bottom: 3px;
    
   }
@@ -488,7 +488,7 @@ article img{
     position: absolute;
     width: 141px;
     border-radius: 5px;
-    left: 24%;
+    left: 25%;
     bottom: 3px;
     z-index: 3;
   }
@@ -506,12 +506,12 @@ article img{
 
   @media screen and (min-width:1024px) {
     .learnTwo::after{
-      left: 38%;
+      left: 38.5%;
     }
 
 
   .learnOne::after{
-    left: 38%;
+    left: 38.5%;
   }
   }
 
