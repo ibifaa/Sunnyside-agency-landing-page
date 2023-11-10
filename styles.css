@@ -233,25 +233,37 @@ article img{
 .content{
     padding: 10%;
     width: 100%;
-    /* display: flex;
-    align-items: center; */
+    position: relative;
+}
+
+@media screen and (min-width:760px) {
+  .content{
+    padding: 15%;
+   
+    background-color: #3dbeff;
+  }
+
+  .text{
+    align-self: center;
+    text-align: left;
+  }
+  
 }
 
 .content h3{
-    text-align: center;
     font-weight: 700;
-    font-size: 1.8rem;
+    font-size: 3rem;
     font-family: 'Fraunces';
     margin-bottom: 20px;
-    width: 80%;
-    margin: auto;
+    /* width: 80%;
+    margin: auto; */
 }
 
 .content p{
-    text-align: center;
     color:  hsl(213, 9%, 39%);
     font-size: 1.3rem;
     margin-top: 20px;
+    line-height: 2;
 }
 
 .content h4{
@@ -273,14 +285,19 @@ article img{
 
   .design{
     background-image: url("images/mobile/image-graphic-design.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    height: 600px;
+  
     /* padding-bottom: 10px; */
   }
 
+  .design, .photography{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 650px;
+  }
+
   .design .content, .photography .content{
+    padding-bottom: 10px;
     margin-top: 80%;
   }
 
@@ -288,12 +305,14 @@ article img{
     margin-bottom: 10px;
   }
 
+  .design .content p, .photography .content p{
+   line-height: 1.4;
+   margin-bottom: 10px;
+  }
+
+
   .photography{
     background-image: url("images/mobile/image-photography.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    height: 600px;
   }
 
   @media screen and (min-width: 768px) {
@@ -429,7 +448,7 @@ article img{
   footer{
     text-align: center;
     padding: 20px;
-    background-color:  hsl(168, 34%, 41%);
+    background-color:  hsl(168, 45%, 65%);
     color:  hsl(167, 40%, 24%);
   }
 
@@ -462,36 +481,30 @@ article img{
   .learn{
     font-size: 1.5rem;
     position: relative;
+    z-index: 2;
+  }
+
+  .line{
+    height: 10px;
+    display: block;
+    position: absolute;
+    width: 160px;
+    border-radius: 5px;
     z-index: 1;
+    bottom:10%;
+    box-shadow: 1px 1px 1px rgb(63, 59, 59);
+    left: 32.5%;
   }
 
-  .learnOne::after{
-    content: " ";
-    /* margin: 5px; */
-    padding: 4px;
+  .lineOne{
     background-color: #ff7362;
-    display: block;
-    position: absolute;
-    width: 141px;
-    border-radius: 5px;
-    left: 25%;
-    bottom: 3px;
-   
   }
 
-  .learnTwo::after{
-    content: " ";
-    /* margin: 5px; */
-    padding: 4px;
+  .lineTwo{
     background-color: #fed501;
-    display: block;
-    position: absolute;
-    width: 141px;
-    border-radius: 5px;
-    left: 25%;
-    bottom: 3px;
-    z-index: 3;
   }
+
+
 
   @media screen and (min-width:760px) {
     .learnTwo::after{
